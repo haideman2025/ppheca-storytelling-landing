@@ -37,7 +37,7 @@
 - [x] Ngăn mascot, sticky CTA và visual hero chồng lên nội dung trên màn hình hẹp.
 - [x] Nâng cấp dự án để hỗ trợ trợ lý AI mascot và cấu hình knowledge base sản phẩm an toàn.
 - [x] Xây giao diện chatbot mascot có animation, gợi ý nhanh và điều hướng link mua hàng.
-- [ ] Kiểm thử desktop/mobile, build, lưu checkpoint và bàn giao bản hỗ trợ tư vấn.
+- [x] Kiểm thử desktop/mobile, build, lưu checkpoint và bàn giao bản hỗ trợ tư vấn.
 - [x] Chụp và rà soát hero ở desktop, tablet và mobile sau sửa crop để xác nhận đầu nhân vật luôn hiển thị trọn vẹn.
 - [x] Rà soát sticky CTA ở màn hình hẹp cùng mascot và hero để xác nhận không còn chồng lớp.
 - [x] Loại bỏ phụ thuộc render Markdown nặng trong chat, vẫn giữ liên kết TikTok Shop có thể bấm và xác nhận build production.
