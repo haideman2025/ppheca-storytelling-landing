@@ -60,5 +60,5 @@
 - [x] Bổ sung xử lý runtime khi video autoplay bị chặn hoặc không phát trên mobile/browser, hiện poster và CTA phát video rõ ràng.
 - [x] Kiểm thử trực tiếp luồng video khi autoplay bị chặn để xác nhận fallback và nút âm thanh hoạt động đúng.
 - [x] Sửa handler nút âm thanh TVC để cập nhật trạng thái rõ ràng sau thao tác người dùng và xử lý promise play/reject nhất quán.
-- [ ] Lưu checkpoint riêng cho phiên bản tích hợp TVC sau khi fallback autoplay và handler âm thanh đã được xác minh.
+- [x] Lưu checkpoint riêng cho phiên bản tích hợp TVC sau khi fallback autoplay và handler âm thanh đã được xác minh.
 - [x] Ghi chú rằng TVC đã pass build, test runtime desktop/mobile và fallback accessibility với aria/status/native controls.
