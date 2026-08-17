@@ -7,7 +7,7 @@
 - [x] Tải visual mới lên kho asset và map vào các section landing page.
 - [x] Nâng cấp motion, mobile UX và hiệu năng tải ảnh.
 - [x] Kiểm tra build cùng bố cục desktop/mobile bằng screenshot.
-- [ ] Lưu checkpoint và bàn giao bản nâng cấp.
+- [x] Lưu checkpoint và bàn giao bản nâng cấp.
 - [x] Viết lại nội dung landing theo lời kể tự nhiên, gần gũi của Thảo.
 - [x] Tinh chỉnh crop, vị trí và tỷ lệ visual hero cho desktop và mobile.
 - [x] Kiểm tra lại nhịp kể chuyện, khả năng đọc và responsive trước khi bàn giao.
@@ -20,15 +20,26 @@
 - [x] Viết lại hành trình phối 7 vị theo lợi ích trải nghiệm, không dùng claim sức khỏe/điều trị chưa xác minh.
 - [x] Tích hợp giá, ưu đãi và CTA chọn quy cách vào bộ sưu tập sản phẩm.
 - [x] Kiểm tra hiển thị Golden Circle, giá và CTA ở desktop/mobile.
-- [ ] Lưu checkpoint và bàn giao bản Golden Circle.
+- [x] Lưu checkpoint và bàn giao bản Golden Circle.
 - [x] Xác định quy tắc giọng kể PPHeCa và vai trò mascot Thảo trong từng chương.
 - [x] Lập danh mục visual còn thiếu cho landing, social và chuyển đổi thương mại.
 - [x] Soạn prompt GPT Image 2 cùng hướng dẫn tạo ảnh, khung hình và kiểm soát bao bì thật.
 - [x] Viết lại toàn bộ copy landing theo góc kể của thương hiệu PPHeCa.
 - [x] Kiểm tra responsive và build trên desktop/mobile.
-- [ ] Lưu checkpoint và bàn giao website cùng prompt pack.
+- [x] Lưu checkpoint và bàn giao website cùng prompt pack.
 - [x] Phân vai bộ visual mới theo các chương: quà tặng, phối vị, khoảnh khắc và lời mời chọn hộp.
 - [x] Tải các visual được chọn lên kho asset và tích hợp không thay thế packshot xác thực.
 - [x] Bổ sung thông tin mua hàng, ưu đãi và CTA phù hợp với hành trình kể chuyện.
 - [x] Kiểm tra lại nhịp kể, lazy loading, crop hình và responsive trên desktop/mobile.
-- [ ] Lưu checkpoint và bàn giao phiên bản tích hợp visual mới.
+- [x] Lưu checkpoint và bàn giao phiên bản tích hợp visual mới.
+- [x] Chuẩn hóa crop hero cho desktop/tablet/mobile theo preview thực tế, bảo toàn phần đầu nhân vật.
+- [x] Thu gọn tea rail desktop và tắt/đổi thành điều hướng nhẹ trên mobile.
+- [x] Ngăn mascot, sticky CTA và visual hero chồng lên nội dung trên màn hình hẹp.
+- [x] Nâng cấp dự án để hỗ trợ trợ lý AI mascot và cấu hình knowledge base sản phẩm an toàn.
+- [x] Xây giao diện chatbot mascot có animation, gợi ý nhanh và điều hướng link mua hàng.
+- [ ] Kiểm thử desktop/mobile, build, lưu checkpoint và bàn giao bản hỗ trợ tư vấn.
+- [x] Chụp và rà soát hero ở desktop, tablet và mobile sau sửa crop để xác nhận đầu nhân vật luôn hiển thị trọn vẹn.
+- [x] Rà soát sticky CTA ở màn hình hẹp cùng mascot và hero để xác nhận không còn chồng lớp.
+- [x] Loại bỏ phụ thuộc render Markdown nặng trong chat, vẫn giữ liên kết TikTok Shop có thể bấm và xác nhận build production.
+- [x] Thay mọi nội dung thành phần mang tính placeholder bằng mô tả chỉ dùng dữ liệu nhãn và catalog đã xác minh.
+- [x] Lập biên bản bàn giao cuối, đối chiếu các checkpoint v1–v6 và mô tả chính xác bản nâng cấp trợ lý Thảo hiện tại.

@@ -1,5 +1,6 @@
 /* PPHeCa — Xưởng Thảo Mộc Đương Đại. The supplied GPT visual system creates one guided journey: real Miss PPHeCa leads, chibi notes annotate, official packshots retain product trust. */
 import { useEffect, useMemo, useState } from "react";
+import { MascotChat } from "@/components/MascotChat";
 import { ArrowDown, ArrowRight, Menu, Sparkles, X } from "lucide-react";
 
 const storage = {
@@ -219,7 +220,7 @@ export default function Home() {
       </section>
 
       <footer className="site-footer"><div className="footer-brand"><TeaMark /><div><strong>PPHeCa</strong><small>XƯỞNG THẢO MỘC · VIỆT NAM</small></div></div><p>Những cốc trà nhỏ cho những ngày thật.</p><span>© 2026 PPHeCa VietNam</span></footer>
-      <button className="floating-cta" onClick={() => scrollTo("collection")}><span>Chọn một nghi thức</span><ArrowRight size={16} /></button>
+      <MascotChat />
     </main>
   );
 }
