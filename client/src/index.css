@@ -150,8 +150,10 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .feature-proof > span:first-child { color: #F5CE74; font-weight: 700; }
 .feature-proof i { width: 7px; height: 7px; background: #F5CE74; border-radius: 50%; display: inline-block; margin-right: 5px; box-shadow: 0 0 0 3px rgba(245,206,116,.14); }
 .product-rail { display: grid; grid-template-columns: repeat(7,1fr); gap: 10px; padding-top: 34px; }
-.product-thumb { background: transparent; border: 0; border-top: 1px solid rgba(67,87,31,.22); padding: 10px 0 0; text-align: left; color: #43571F; opacity: .66; cursor: pointer; transition: opacity .18s ease, transform .18s var(--ease-out), border-color .18s ease; }
+.product-thumb { background: transparent; border: 0; border-top: 1px solid rgba(67,87,31,.22); padding: 10px 0 0; text-align: left; color: #43571F; opacity: .66; cursor: pointer; transition: opacity .18s ease, transform .18s var(--ease-out), border-color .18s ease; position: relative; }
 .product-thumb:hover, .product-thumb.is-active { opacity: 1; transform: translateY(-4px); border-color: #43571F; }
+.product-thumb.is-active { background: linear-gradient(180deg,rgba(244,237,223,.64),rgba(244,237,223,0)); }
+.product-choice-no { display: block; color: #B76861; font-size: 8px; font-weight: 700; letter-spacing: .14em; margin: 0 0 7px; }
 .product-thumb img { display: block; width: 68px; height: 68px; object-fit: cover; background: #F4EDDF; mix-blend-mode: multiply; }
 .product-thumb span, .product-thumb small { display: block; margin-top: 9px; font-weight: 700; font-size: 11px; line-height: 1.05; }
 .product-thumb small { font-weight: 400; color: #7b7d6e; margin-top: 4px; }
@@ -176,12 +178,14 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .floating-cta { position: fixed; right: 22px; bottom: 22px; z-index: 40; border: 0; border-radius: 99px; padding: 12px 17px; background: #E3A93C; color: #43571F; display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 11px; box-shadow: 0 13px 28px rgba(67,87,31,.17); cursor: pointer; transition: transform .18s var(--ease-out); }
 .floating-cta:hover { transform: translateY(-3px); }
 
+/* Design reminder — Xưởng Thảo Mộc: the tea rail is PPHeCa's workshop path, not a generic side nav. */
 /* The tea rail is the page spine: four workshop stops stay visible on wide screens and give every chapter one shared Deep Olive path. */
-.tea-rail { position: fixed; z-index: 45; left: 0; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-start; gap: 22px; color: #5F7A2E; font-size: 9px; letter-spacing: .05em; padding: 17px 19px 17px 9px; background: rgba(244,237,223,.94); border: 1px solid rgba(67,87,31,.15); border-left: 0; border-radius: 0 18px 18px 0; box-shadow: 8px 14px 30px rgba(67,87,31,.08); }
-.rail-line { position: absolute; top: 31px; bottom: 31px; left: 23px; width: 2px; background: #43571F; opacity: .7; z-index: -1; }
-.rail-stop { width: 29px; min-height: 29px; border-radius: 50%; background: #F4EDDF; border: 1px solid rgba(67,87,31,.35); display: grid; place-items: center; color: #5F7A2E; padding: 0; cursor: pointer; transition: background .18s ease, color .18s ease, transform .18s var(--ease-out); position: relative; font-size: 9px; font-weight: 700; }
+.tea-rail { position: fixed; z-index: 45; left: 0; top: 102px; bottom: 38px; transform: none; width: 158px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; color: #5F7A2E; font-size: 9px; letter-spacing: .05em; padding: 42px 19px 32px 10px; background: linear-gradient(90deg,rgba(244,237,223,.97),rgba(244,237,223,.84)); border: 1px solid rgba(67,87,31,.18); border-left: 0; border-radius: 0 18px 18px 0; box-shadow: 8px 14px 30px rgba(67,87,31,.08); }
+.rail-title { position: absolute; top: 15px; left: 14px; color: #B76861; font-size: 7px; font-weight: 700; letter-spacing: .16em; }
+.rail-line { position: absolute; top: 60px; bottom: 48px; left: 24px; width: 2px; background: linear-gradient(#43571F 0%,#43571F 87%,rgba(67,87,31,.1) 100%); opacity: .85; z-index: -1; }
+.rail-stop { width: 30px; min-height: 30px; border-radius: 50%; background: #F4EDDF; border: 1px solid rgba(67,87,31,.35); display: grid; place-items: center; color: #5F7A2E; padding: 0; cursor: pointer; transition: background .18s ease, color .18s ease, transform .18s var(--ease-out); position: relative; font-size: 9px; font-weight: 700; }
 .rail-stop:hover { transform: scale(1.08); }
-.rail-stop small { position: absolute; left: 38px; min-width: max-content; font-size: 8px; font-weight: 700; letter-spacing: .11em; color: #43571F; pointer-events: none; transform: translateX(0); }
+.rail-stop small { position: absolute; left: 40px; min-width: max-content; font-size: 8px; font-weight: 700; letter-spacing: .11em; color: #43571F; pointer-events: none; transform: translateX(0); }
 .rail-stop.active { background: #43571F; color: #F5CE74; border-color: #43571F; }
 
 @media (prefers-reduced-motion: no-preference) {

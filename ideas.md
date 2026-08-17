@@ -73,5 +73,6 @@ Wordmark PPHeCa dùng chữ serif mềm với chữ H biến thành hình phễu
 - Không bịa review, rating hoặc testimonial.
 - Trà An Giấc và Dưỡng Cốt giữ cảnh báo nhóm sản phẩm theo ảnh thực tế đã cung cấp.
 - Tea rail là trục dẫn chuyện bắt buộc trên desktop: bốn điểm dừng “Vì sao / 7 vị & phối / Khoảnh khắc / Chọn hộp” dùng Deep Olive #43571F như đường dẫn xuyên suốt.
-- Thảo là người kể chuyện chính ở mọi bước quyết định; ảnh lifestyle chỉ được dùng làm bối cảnh hỗ trợ, không thay thế vai trò dẫn đường của mascot.
+- Thảo là mascot đại diện, xuất hiện ở các điểm chuyển cảnh và lựa chọn để xác nhận thế giới PPHeCa; tiếng nói kể chuyện thuộc về thương hiệu, không phải lời độc thoại của Thảo.
 - Packshot thật luôn được kể như một “nghi thức nhỏ để chọn”, có mẩu chuyện cảm xúc và dấu hiệu nguyên liệu kèm theo; không trình bày như lưới SKU thương mại điện tử chung chung.
+- Tea rail là đường Deep Olive liên tục trên desktop, kết nối bốn điểm dừng “Vì sao / 7 vị & phối / Khoảnh khắc / Chọn hộp” như bản đồ Xưởng Thảo Mộc.

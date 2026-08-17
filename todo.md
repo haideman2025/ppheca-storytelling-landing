@@ -21,3 +21,9 @@
 - [x] Tích hợp giá, ưu đãi và CTA chọn quy cách vào bộ sưu tập sản phẩm.
 - [x] Kiểm tra hiển thị Golden Circle, giá và CTA ở desktop/mobile.
 - [ ] Lưu checkpoint và bàn giao bản Golden Circle.
+- [x] Xác định quy tắc giọng kể PPHeCa và vai trò mascot Thảo trong từng chương.
+- [x] Lập danh mục visual còn thiếu cho landing, social và chuyển đổi thương mại.
+- [x] Soạn prompt GPT Image 2 cùng hướng dẫn tạo ảnh, khung hình và kiểm soát bao bì thật.
+- [x] Viết lại toàn bộ copy landing theo góc kể của thương hiệu PPHeCa.
+- [x] Kiểm tra responsive và build trên desktop/mobile.
+- [ ] Lưu checkpoint và bàn giao website cùng prompt pack.
