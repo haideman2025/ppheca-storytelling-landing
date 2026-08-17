@@ -46,3 +46,10 @@
 - [x] Xác nhận các file mã landing PPHeCa, MascotChat, router tRPC và styles đang là bản triển khai thực tế, không phải template ví dụ.
 - [x] Sửa dứt điểm phụ thuộc runtime `dotenv`, sau đó lưu bằng chứng build production thành công.
 - [x] Chụp lại desktop/mobile trên phiên bản trợ lý đã xác minh rồi mới chốt kiểm thử và bàn giao.
+- [x] Lưu bản trích xuất Google Sheet chính thức và nguồn truy vết vào dự án.
+- [x] Bổ sung ý nghĩa tên PPHeCa (Products/Prosperity, Health, Care) vào câu chuyện thương hiệu.
+- [x] Cập nhật knowledge base chatbot theo bảy sản phẩm và các quy tắc diễn đạt từ nguồn nhà sáng lập.
+- [x] Tái cấu trúc landing theo trục Nhà sáng lập → PPHeCa → Thảo → bảy sản phẩm, không thay packshot chính thức.
+- [x] Kiểm thử nội dung, responsive, build và lưu checkpoint cho bản nâng cấp câu chuyện thương hiệu.
+- [x] Cập nhật test knowledge base để chấp nhận định dạng 300–600ml chính thức và giữ kiểm thử ý nghĩa tên PPHeCa.
+- [ ] Lưu checkpoint mới cho phiên bản landing cập nhật theo câu chuyện nhà sáng lập và Google Sheet sau khi đã pass build, test và responsive review.

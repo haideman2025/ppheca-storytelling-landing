@@ -49,10 +49,11 @@ const steps = [
 ];
 
 const chapters = [
-  { id: "story", number: "01", label: "Vì sao" },
-  { id: "workshop", number: "02", label: "7 vị & phối" },
-  { id: "ritual", number: "03", label: "Khoảnh khắc" },
-  { id: "collection", number: "04", label: "Chọn hộp" },
+  { id: "founder", number: "01", label: "Nhà sáng lập" },
+  { id: "story", number: "02", label: "Vì sao" },
+  { id: "workshop", number: "03", label: "7 vị & phối" },
+  { id: "ritual", number: "04", label: "Khoảnh khắc" },
+  { id: "collection", number: "05", label: "Chọn hộp" },
 ];
 
 function TeaMark() {
@@ -120,7 +121,7 @@ export default function Home() {
           <span><strong>PPHeCa</strong><small>VIETNAM · HERBAL TEA</small></span>
         </button>
         <nav className={menuOpen ? "header-nav is-open" : "header-nav"} aria-label="Điều hướng chính">
-          <button onClick={() => scrollTo("story")}>Câu chuyện PPHeCa</button>
+          <button onClick={() => scrollTo("founder")}>Câu chuyện nhà sáng lập</button>
           <button onClick={() => scrollTo("workshop")}>Vào Xưởng Thảo Mộc</button>
           <button onClick={() => scrollTo("collection")}>Chọn nghi thức</button>
           <button className="nav-cta" onClick={() => scrollTo("collection")}>Tìm vị hợp hôm nay <ArrowRight size={15} /></button>
@@ -132,14 +133,14 @@ export default function Home() {
 
       <section id="top" className="hero-section">
         <div className="hero-copy" data-reveal>
-          <p className="eyebrow"><span className="eyebrow-line" /> PPHECA · XƯỞNG THẢO MỘC VIỆT</p>
-          <h1>Một cốc trà ấm<br />cho những<br /><em>ngày thật.</em></h1>
-          <p className="hero-lead">PPHeCa tin rằng chăm sóc bản thân không nhất thiết phải bắt đầu bằng một điều lớn lao. Đôi khi, chỉ là nước nóng, một túi trà thơm và vài phút để ngồi lại cùng mình.</p>
+          <p className="eyebrow"><span className="eyebrow-line" /> PPHECA · PI–PI–HÊ–CA</p>
+          <h1>Một cái tên<br />được bắt đầu<br /><em>từ sự chăm.</em></h1>
+          <p className="hero-lead">Từ câu chuyện của nhà sáng lập, PPHeCa được gọi theo bốn lớp nghĩa: Products và Prosperity, Health và Care. Một thương hiệu Việt bắt đầu bằng sản phẩm tử tế, để sự chăm sóc hôm nay đi cùng sức khỏe bền vững và thịnh vượng mai sau.</p>
           <div className="hero-actions">
             <button className="button button-primary" onClick={() => scrollTo("collection")}>Tìm vị hợp hôm nay <ArrowRight size={17} /></button>
             <button className="text-link" onClick={() => scrollTo("workshop")}>Vào Xưởng Thảo Mộc <ArrowDown size={16} /></button>
           </div>
-          <div className="hero-note"><span className="note-dot" /> Ở đây, bạn không cần chọn thật nhanh.</div>
+          <div className="hero-note"><span className="note-dot" /> Phát âm: Pi – Pi – Hê – Ca · câu chuyện bắt đầu từ nhà sáng lập.</div>
         </div>
         <div className="hero-art" aria-label="Miss PPHeCa chào bạn ở Xưởng Thảo Mộc" data-reveal>
           <img className="hero-mascot-portrait" src={storage.mascot} alt="Miss PPHeCa, mascot chính thức của thương hiệu" fetchPriority="high" />
@@ -152,8 +153,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="founder" className="founder-section section-pad">
+        <div className="founder-grid" data-reveal>
+          <div className="founder-mark"><span>PPHeCa</span><small>PI · PI · HÊ · CA</small><i>Products<br />Prosperity<br />Health<br />Care</i></div>
+          <div className="founder-copy"><div className="section-kicker">CÂU CHUYỆN NHÀ SÁNG LẬP <span>01 · ORIGIN</span></div><h2>Một cái tên mang theo lời hứa <em>chăm sóc.</em></h2><p>Nhà sáng lập đặt tên PPHeCa từ những điều muốn gửi gắm vào thương hiệu: <strong>P</strong> của Products — những sản phẩm được làm ra có trách nhiệm; <strong>P</strong> của Prosperity — mong muốn sức khỏe và sự thịnh vượng được nuôi bền vững; <strong>He</strong> của Health; và <strong>Ca</strong> của Care.</p><p>Vì thế, PPHeCa không chỉ bán một túi trà. PPHeCa kể câu chuyện về cách một doanh nghiệp Việt có thể bắt đầu từ sự quan tâm rất cụ thể: chọn nguyên liệu, phối vị, đóng gói và đưa đến tay bạn một nghi thức chăm sóc dễ bước vào đời sống.</p><div className="founder-name-story"><span>PP</span><strong>Products · Prosperity</strong><span>He</span><strong>Health</strong><span>Ca</span><strong>Care</strong></div><button className="text-link olive" onClick={() => scrollTo("story")}>Đi tiếp vào Big Why của PPHeCa <ArrowRight size={15} /></button></div>
+        </div>
+      </section>
+
       <section id="story" className="story-section section-pad">
-        <div className="section-kicker">VÌ SAO PPHECA BẮT ĐẦU <span>01 · WHY</span></div>
+          <div className="section-kicker">VÌ SAO PPHECA BẮT ĐẦU <span>02 · WHY</span></div>
         <div className="story-grid" data-reveal>
           <div className="story-title"><h2>Ai cũng cần một chỗ để</h2><span className="scribble">thở chậm lại.</span><figure className="story-scene"><img src={storage.storyHands} alt="Bàn tay chuẩn bị trà thảo mộc trong ánh sáng ấm" loading="lazy" /><figcaption>NHỮNG ĐIỀU NHỎ, ĐƯỢC LÀM CHẬM RÃI</figcaption></figure></div>
           <div className="story-body"><MascotNote image={storage.chibiWelcome} title="Thảo dẫn chuyện" detail="vì sao PPHeCa bắt đầu" /><p>PPHeCa không được tạo ra để bạn phải sống khác đi chỉ sau một cốc trà. Thương hiệu bắt đầu từ một niềm tin giản dị: giữa những ngày bận rộn, mỗi người đều cần một tín hiệu nhỏ rằng mình cũng đáng được chăm sóc.</p><p>Có thể là rót nước cho mẹ. Có thể là nhắn một người bạn: “Về nhà pha trà đi, rồi kể mình nghe.” PPHeCa tin đó là cách quan tâm không cần nói thật to.</p><div className="golden-bridge"><span>VÌ SAO</span><strong>Một khoảng nghỉ ấm áp cho những ngày thật.</strong><span>THẾ NÀO</span><strong>Nhìn kỹ, phối vừa và gói sẵn bảy vị thảo mộc.</strong><span>ĐIỀU GÌ</span><strong>Những hộp trà để bạn chọn theo nhịp sống của mình.</strong></div><button className="text-link olive" onClick={() => scrollTo("workshop")}>Khám phá cách PPHeCa phối vị <ArrowRight size={15} /></button></div>
@@ -168,7 +176,7 @@ export default function Home() {
         </figure>
         <div className="workshop-copy" data-reveal>
           <MascotNote image={storage.chibiWorkshop} title="Thảo nhắc nhẹ" detail="nhìn thấy mới tin" dark />
-          <div className="section-kicker">PPHECA LÀM THẾ NÀO <span>02 · HOW</span></div>
+          <div className="section-kicker">PPHECA LÀM THẾ NÀO <span>03 · HOW</span></div>
           <h2>PPHeCa bắt đầu từ bảy vị, rồi mới nghĩ đến một cốc trà.</h2>
           <p>Trong xưởng, PPHeCa không gọi đây là những “thành phần thần kỳ”. Đó là bảy người bạn: mỗi vị có mùi, sắc và cá tính riêng; cùng đi vào một công thức để cốc trà thơm, cân bằng và dễ uống.</p>
           <p>PPHeCa nhìn từng vị trước, đặt chúng cạnh nhau sau. Khi mùi hương đủ dịu và cảm giác uống đủ gần gũi cho một ngày bình thường, chúng mới được gói vào túi trà — để một khoảng nghỉ nhỏ trở thành nếp chăm sóc bản thân dễ duy trì.</p>
@@ -179,7 +187,7 @@ export default function Home() {
       <section id="ritual" className="ritual-section section-pad">
         <div className="ritual-copy" data-reveal>
           <MascotNote image={storage.chibiRitual} title="Thảo nhắc khẽ" detail="pha chậm một chút" />
-          <div className="section-kicker">MỘT KHOẢNG NGHỈ NHỎ <span>03</span></div>
+          <div className="section-kicker">MỘT KHOẢNG NGHỈ NHỎ <span>04</span></div>
           <h2>Không cần thêm thời gian. Chỉ giữ lại ba phút thôi.</h2>
           <p>PPHeCa gợi ý một khoảng nghỉ rất đơn giản: đặt điện thoại xuống, cho túi trà vào cốc và đợi nước nóng ôm lấy mùi thơm. Một thói quen nhỏ có thể bắt đầu mà không cần cầu kỳ, cũng không cần chờ đến khi mọi thứ đã xong xuôi.</p>
           <div className="pull-quote">“Mình ngửi trước một chút nhé. Rồi hãy uống.”</div>
@@ -196,7 +204,7 @@ export default function Home() {
         <div className="collection-header" data-reveal>
           <div>
             <MascotNote image={storage.chibiCollection} title="Thảo gợi ý" detail="bảy nghi thức ở đây" />
-            <div className="section-kicker">ĐÂY LÀ HỘP TRÀ <span>04 · WHAT</span></div>
+            <div className="section-kicker">ĐÂY LÀ HỘP TRÀ <span>05 · WHAT</span></div>
             <h2>Hôm nay, bạn muốn<br /><em>chọn nghi thức nào?</em></h2>
           </div>
           <div className="collection-intro"><p>Đây là ảnh thật của từng hộp trà PPHeCa. Chọn vị hợp với nhịp hôm nay, rồi chọn quy cách 05 hoặc 15 gói; phần còn lại là để một cốc nước nóng làm giúp mình.</p><div className="choice-guide"><span><b>01</b> Chọn vị theo nhịp ngày</span><span><b>02</b> Chọn 05 hoặc 15 gói</span><span><b>03</b> Kiểm tra ưu đãi tại gian hàng</span></div></div>
@@ -216,7 +224,7 @@ export default function Home() {
 
       <section className="closing-section">
         <div className="closing-art" data-reveal><img src={storage.closingScene} alt="Bàn tay đặt túi trà thảo mộc cạnh cốc trà trong ánh nắng" loading="lazy" /><span className="closing-art-label">MỘT KHOẢNG NGHỈ, ĐƯỢC ĐẶT SẴN</span></div>
-        <div className="closing-copy" data-reveal><MascotNote image={storage.chibiRitual} title="Thảo nhắc giúp PPHeCa" detail="một cốc trà, một nhịp thở" dark /><div className="section-kicker">PPHECA LUÔN Ở ĐÂY <span>06</span></div><h2>Chọn một hộp trà<br />cho khoảng nghỉ<br />của bạn.</h2><p>Khi cần một khoảng nghỉ, hãy quay lại Xưởng Thảo Mộc. PPHeCa luôn sẵn sàng kể bạn nghe về từng vị trà, thật chậm rãi.</p><button className="button button-cream" onClick={() => scrollTo("collection")}>Chọn một nghi thức <ArrowRight size={17} /></button><div className="legal-note">Hình mascot và visual minh họa dùng cho storytelling. Sản phẩm và thông tin trên landing page cần đối chiếu với bao bì, hồ sơ công bố và hướng dẫn sử dụng chính thức trước khi đăng bán.</div></div>
+        <div className="closing-copy" data-reveal><MascotNote image={storage.chibiRitual} title="Thảo nhắc giúp PPHeCa" detail="một cốc trà, một nhịp thở" dark /><div className="section-kicker">PPHECA LUÔN Ở ĐÂY <span>07</span></div><h2>Chọn một hộp trà<br />cho khoảng nghỉ<br />của bạn.</h2><p>Khi cần một khoảng nghỉ, hãy quay lại Xưởng Thảo Mộc. PPHeCa luôn sẵn sàng kể bạn nghe về từng vị trà, thật chậm rãi.</p><button className="button button-cream" onClick={() => scrollTo("collection")}>Chọn một nghi thức <ArrowRight size={17} /></button><div className="legal-note">Hình mascot và visual minh họa dùng cho storytelling. Sản phẩm và thông tin trên landing page cần đối chiếu với bao bì, hồ sơ công bố và hướng dẫn sử dụng chính thức trước khi đăng bán.</div></div>
       </section>
 
       <footer className="site-footer"><div className="footer-brand"><TeaMark /><div><strong>PPHeCa</strong><small>XƯỞNG THẢO MỘC · VIỆT NAM</small></div></div><p>Những cốc trà nhỏ cho những ngày thật.</p><span>© 2026 PPHeCa VietNam</span></footer>

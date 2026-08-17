@@ -7,12 +7,12 @@ describe("mascot chat knowledge and safety guards", () => {
 
     expect(prompt).toContain("54.400đ");
     expect(prompt).toContain("159.200đ");
-    expect(prompt).toContain("300–600 ml");
-    expect(prompt).toContain("Trà Mộc Nhan Đông Trùng 7 Vị");
-    expect(prompt).toContain("Trà An Giấc 7 Vị");
-    expect(prompt).toContain("không được tự liệt kê từng thành phần");
-    expect(prompt).toContain("Lạc tiên, sâm nam, hành ngụ chi");
-    expect(prompt).not.toContain("đang được PPHeCa đối chiếu");
+    expect(prompt).toContain("300–600ml");
+    expect(prompt).toContain("Trà Thảo Mộc Mộc Nhan Đông Trùng 7 Vị PPHeCa");
+    expect(prompt).toContain("Trà Thảo Mộc An Giấc 7 Vị PPHeCa");
+    expect(prompt).toContain("Không tự suy đoán thành phần");
+    expect(prompt).toContain("Hành ngu chi");
+    expect(prompt).toContain("Products (sản phẩm) và Prosperity (thịnh vượng)");
   });
 
   it("recognizes purchase intent and health-risk requests conservatively", () => {
@@ -29,7 +29,7 @@ describe("mascot chat knowledge and safety guards", () => {
     expect(priceReply?.reply).toContain("159.200đ");
     expect(priceReply?.reply).toContain("TikTok Shop PPHeCa");
     expect(priceReply?.showShopLink).toBe(true);
-    expect(brewingReply?.reply).toContain("300–600 ml");
+    expect(brewingReply?.reply).toContain("300–600ml");
     expect(brewingReply?.reply).toContain("5–10 phút");
     expect(brewingReply?.showShopLink).toBe(false);
   });
