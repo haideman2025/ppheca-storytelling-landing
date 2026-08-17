@@ -52,4 +52,13 @@
 - [x] Tái cấu trúc landing theo trục Nhà sáng lập → PPHeCa → Thảo → bảy sản phẩm, không thay packshot chính thức.
 - [x] Kiểm thử nội dung, responsive, build và lưu checkpoint cho bản nâng cấp câu chuyện thương hiệu.
 - [x] Cập nhật test knowledge base để chấp nhận định dạng 300–600ml chính thức và giữ kiểm thử ý nghĩa tên PPHeCa.
-- [ ] Lưu checkpoint mới cho phiên bản landing cập nhật theo câu chuyện nhà sáng lập và Google Sheet sau khi đã pass build, test và responsive review.
+- [x] Lưu checkpoint mới cho phiên bản landing cập nhật theo câu chuyện nhà sáng lập và Google Sheet sau khi đã pass build, test và responsive review.
+- [x] Kiểm tra thời lượng, tỷ lệ khung hình và dung lượng TVC PPHeCaTVC.mp4.
+- [x] Upload TVC vào kho asset webdev và tích hợp vào landing với lớp video nền phù hợp.
+- [x] Thêm điều khiển âm thanh rõ ràng, xử lý autoplay theo giới hạn trình duyệt và fallback mobile.
+- [x] Kiểm tra khả năng truy cập, hiệu năng, desktop/mobile, build và lưu checkpoint TVC.
+- [x] Bổ sung xử lý runtime khi video autoplay bị chặn hoặc không phát trên mobile/browser, hiện poster và CTA phát video rõ ràng.
+- [x] Kiểm thử trực tiếp luồng video khi autoplay bị chặn để xác nhận fallback và nút âm thanh hoạt động đúng.
+- [x] Sửa handler nút âm thanh TVC để cập nhật trạng thái rõ ràng sau thao tác người dùng và xử lý promise play/reject nhất quán.
+- [ ] Lưu checkpoint riêng cho phiên bản tích hợp TVC sau khi fallback autoplay và handler âm thanh đã được xác minh.
+- [x] Ghi chú rằng TVC đã pass build, test runtime desktop/mobile và fallback accessibility với aria/status/native controls.

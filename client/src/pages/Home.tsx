@@ -1,7 +1,7 @@
 /* PPHeCa — Xưởng Thảo Mộc Đương Đại. The supplied GPT visual system creates one guided journey: real Miss PPHeCa leads, chibi notes annotate, official packshots retain product trust. */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { MascotChat } from "@/components/MascotChat";
-import { ArrowDown, ArrowRight, Menu, Sparkles, X } from "lucide-react";
+import { ArrowDown, ArrowRight, Menu, Sparkles, Volume2, VolumeX, X } from "lucide-react";
 
 const storage = {
   // PPHeCa Xưởng Thảo Mộc: lifestyle images are narrative chapters; official packshots remain the product proof.
@@ -23,6 +23,8 @@ const storage = {
   productScene: "/manus-storage/product_staging_story_e71787ab.jpeg",
   giftScene: "/manus-storage/Arranging_herbal_tea_gift_202608171648_ed07829d.jpeg",
   closingScene: "/manus-storage/Hands_placing_herbal_tea_pouch_202608171644_71903694.jpeg",
+  tvc: "/manus-storage/ppheca-tvc-vsl-web_6fd62621.mp4",
+  tvcPoster: "/manus-storage/ppheca-tvc-poster_6f0a7f56.jpg",
 };
 
 const shopUrl = "https://vt.tiktok.com/ZS9kmsHgCRh1o-fN0Px/";
@@ -55,6 +57,92 @@ const chapters = [
   { id: "ritual", number: "04", label: "Khoảnh khắc" },
   { id: "collection", number: "05", label: "Chọn hộp" },
 ];
+
+function TvcSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [soundOn, setSoundOn] = useState(false);
+  const [needsPlay, setNeedsPlay] = useState(false);
+  const [soundBlocked, setSoundBlocked] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    let cancelled = false;
+    const attemptAutoplay = () => {
+      video.muted = true;
+      video.play().then(() => {
+        if (!cancelled) setNeedsPlay(false);
+      }).catch(() => {
+        if (!cancelled) setNeedsPlay(true);
+      });
+    };
+    if (video.readyState >= 2) attemptAutoplay();
+    else video.addEventListener("canplay", attemptAutoplay, { once: true });
+    return () => {
+      cancelled = true;
+      video.removeEventListener("canplay", attemptAutoplay);
+    };
+  }, []);
+
+  const playVideo = async (withSound: boolean) => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !withSound;
+    video.volume = 1;
+    setNeedsPlay(false);
+    setSoundBlocked(false);
+    setSoundOn(withSound);
+    try {
+      await video.play();
+    } catch {
+      video.muted = true;
+      setSoundOn(false);
+      if (withSound) {
+        setSoundBlocked(true);
+        setNeedsPlay(false);
+      } else {
+        setNeedsPlay(true);
+      }
+    }
+  };
+
+  const toggleSound = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (soundOn) {
+      video.muted = true;
+      setSoundOn(false);
+      return;
+    }
+    await playVideo(true);
+  };
+
+  return (
+    <section className="tvc-section" aria-labelledby="tvc-title">
+      <video ref={videoRef} className="tvc-video" autoPlay muted loop playsInline controls={soundBlocked || needsPlay} preload="metadata" poster={storage.tvcPoster} aria-label="TVC PPHeCa kể câu chuyện về những nghi thức trà thảo mộc" onError={() => setNeedsPlay(true)}>
+        <source src={storage.tvc} type="video/mp4" />
+      </video>
+      <div className="tvc-scrim" />
+      <div className="tvc-content" data-reveal>
+        <p className="eyebrow tvc-eyebrow"><span className="eyebrow-line" /> PPHECA · MỘT KHOẢNH KHẮC ĐƯỢC CHĂM</p>
+        <h2 id="tvc-title">Bảy vị thảo mộc.<br /><em>Một nhịp chăm.</em></h2>
+        <p>Hãy để câu chuyện của PPHeCa đi cùng bạn trong vài phút. Video tự phát ở chế độ im lặng để không làm gián đoạn trải nghiệm; chạm nút âm thanh để nghe trọn vẹn phần kể chuyện.</p>
+        {needsPlay ? (
+          <button className="tvc-sound-button" type="button" onClick={() => void playVideo(false)} aria-label="Phát TVC PPHeCa">
+            <Volume2 size={17} /><span>Phát TVC</span>
+          </button>
+        ) : (
+          <button className="tvc-sound-button" type="button" onClick={() => void toggleSound()} aria-pressed={soundOn} aria-label={soundOn ? "Tắt âm thanh TVC" : soundBlocked ? "Mở điều khiển để bật âm thanh TVC" : "Bật âm thanh TVC"}>
+            {soundOn ? <Volume2 size={17} /> : <VolumeX size={17} />}
+            <span>{soundOn ? "Đang phát âm thanh" : soundBlocked ? "Dùng điều khiển video để nghe" : "Bật âm thanh TVC"}</span>
+          </button>
+        )}
+        <p className="tvc-status" role="status" aria-live="polite">{needsPlay ? "Trình duyệt đang chờ thao tác của bạn để phát video." : soundOn ? "Âm thanh đang bật." : soundBlocked ? "Trình duyệt chặn autoplay có âm thanh; dùng điều khiển video để bật tiếng." : "Video nền đang phát im lặng."}</p>
+      </div>
+      <span className="tvc-duration">PPHECA TVC · 01:30</span>
+    </section>
+  );
+}
 
 function TeaMark() {
   return <span className="brand-mark" aria-hidden="true"><i className="tea-filter" /><b className="tea-leaf" /></span>;
@@ -152,6 +240,8 @@ export default function Home() {
           <div className="hero-caption"><span>01 / 07</span><span>PPHeCa bắt đầu từ bảy vị quen và một khoảng nghỉ thật.</span></div>
         </div>
       </section>
+
+      <TvcSection />
 
       <section id="founder" className="founder-section section-pad">
         <div className="founder-grid" data-reveal>
