@@ -8,3 +8,6 @@
 - [x] Nâng cấp motion, mobile UX và hiệu năng tải ảnh.
 - [x] Kiểm tra build cùng bố cục desktop/mobile bằng screenshot.
 - [ ] Lưu checkpoint và bàn giao bản nâng cấp.
+- [x] Viết lại nội dung landing theo lời kể tự nhiên, gần gũi của Thảo.
+- [x] Tinh chỉnh crop, vị trí và tỷ lệ visual hero cho desktop và mobile.
+- [x] Kiểm tra lại nhịp kể chuyện, khả năng đọc và responsive trước khi bàn giao.
