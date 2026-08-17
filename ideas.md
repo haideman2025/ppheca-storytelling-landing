@@ -76,3 +76,6 @@ Wordmark PPHeCa dùng chữ serif mềm với chữ H biến thành hình phễu
 - Thảo là mascot đại diện, xuất hiện ở các điểm chuyển cảnh và lựa chọn để xác nhận thế giới PPHeCa; tiếng nói kể chuyện thuộc về thương hiệu, không phải lời độc thoại của Thảo.
 - Packshot thật luôn được kể như một “nghi thức nhỏ để chọn”, có mẩu chuyện cảm xúc và dấu hiệu nguyên liệu kèm theo; không trình bày như lưới SKU thương mại điện tử chung chung.
 - Tea rail là đường Deep Olive liên tục trên desktop, kết nối bốn điểm dừng “Vì sao / 7 vị & phối / Khoảnh khắc / Chọn hộp” như bản đồ Xưởng Thảo Mộc.
+- Tea rail dùng nền Deep Olive cùng đường Tea Gold trên desktop để trở thành bản đồ Xưởng Thảo Mộc có thể nhận ra ngay khi cuộn trang.
+- Thảo xuất hiện ở hero, các điểm chuyển cảnh, lựa chọn hộp và lời mời quà tặng với tỷ lệ đủ đọc; mascot xác nhận thế giới thương hiệu nhưng không thay tiếng nói PPHeCa.
+- Dải bảy hộp trà được trình bày như bảy nghi thức lệch nhịp, có packshot thật, tên khoảnh khắc và bước vào CTA thay vì lưới SKU trung tính.

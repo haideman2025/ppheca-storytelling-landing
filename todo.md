@@ -27,3 +27,8 @@
 - [x] Viết lại toàn bộ copy landing theo góc kể của thương hiệu PPHeCa.
 - [x] Kiểm tra responsive và build trên desktop/mobile.
 - [ ] Lưu checkpoint và bàn giao website cùng prompt pack.
+- [x] Phân vai bộ visual mới theo các chương: quà tặng, phối vị, khoảnh khắc và lời mời chọn hộp.
+- [x] Tải các visual được chọn lên kho asset và tích hợp không thay thế packshot xác thực.
+- [x] Bổ sung thông tin mua hàng, ưu đãi và CTA phù hợp với hành trình kể chuyện.
+- [x] Kiểm tra lại nhịp kể, lazy loading, crop hình và responsive trên desktop/mobile.
+- [ ] Lưu checkpoint và bàn giao phiên bản tích hợp visual mới.
