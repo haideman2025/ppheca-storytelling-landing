@@ -63,10 +63,9 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .hero-note { margin-top: 54px; color: #7d806e; font-size: 11px; display: flex; align-items: center; gap: 9px; }
 .note-dot { width: 7px; height: 7px; border-radius: 50%; background: #E3A93C; box-shadow: 0 0 0 4px rgba(227,169,60,.13); }
 .hero-art { min-height: 680px; position: relative; display: grid; place-items: center; isolation: isolate; }
-/* Hero crop: the setting is deliberately pushed right so the foreground portrait gets a clean silhouette and never competes with the copy. */
-.hero-scene { width: 92%; height: 680px; object-fit: cover; object-position: 54% 46%; border-radius: 49% 49% 1.5rem 1.5rem; filter: saturate(.84) contrast(.98); position: absolute; inset: 0 0 auto auto; z-index: 0; }
-.hero-scene-wash { width: 92%; height: 680px; position: absolute; inset: 0 0 auto auto; border-radius: 49% 49% 1.5rem 1.5rem; background: linear-gradient(180deg,rgba(244,237,223,.03) 26%,rgba(67,87,31,.21)); z-index: 1; pointer-events: none; }
-.hero-mascot-portrait { width: min(71%,540px); height: 104%; object-fit: contain; object-position: 50% 100%; position: absolute; right: 8%; bottom: -10px; z-index: 3; filter: drop-shadow(0 22px 25px rgba(45,48,33,.24)); }
+/* One-photo hero: Miss PPHeCa already includes the workshop setting, so the image is cropped once inside a single arch frame rather than layered over a second scene. */
+.hero-art::before { content: ""; position: absolute; width: 88%; height: 92%; right: 0; bottom: 1%; border-radius: 49% 49% 1.5rem 1.5rem; background: linear-gradient(145deg,rgba(227,169,60,.24),rgba(95,122,46,.18)); z-index: 0; }
+.hero-mascot-portrait { width: 86%; height: 680px; object-fit: cover; object-position: 50% 43%; position: absolute; right: 5%; top: 0; z-index: 3; border-radius: 49% 49% 1.5rem 1.5rem; box-shadow: 0 24px 30px rgba(45,48,33,.19); }
 .hero-orbit { position: absolute; border: 1px solid rgba(67,87,31,.26); border-radius: 50%; pointer-events: none; z-index: 2; }
 .orbit-one { width: 75%; height: 65%; transform: rotate(-17deg); }
 .orbit-two { width: 85%; height: 47%; border-color: rgba(227,169,60,.62); transform: rotate(22deg); }
@@ -84,7 +83,9 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .dark-note .mascot-note-image { filter: drop-shadow(0 5px 8px rgba(0,0,0,.24)); }
 
 .section-pad { padding: 130px 10vw; }
-.section-kicker { display: flex; align-items: center; justify-content: space-between; max-width: 220px; margin-bottom: 32px; }
+.section-kicker { display: flex; align-items: center; justify-content: space-between; max-width: 248px; margin-bottom: 32px; position: relative; }
+.section-kicker::before { content: ""; width: 18px; height: 18px; border: 1px solid rgba(67,87,31,.4); border-radius: 50%; box-shadow: inset 0 0 0 4px #F4EDDF, inset 0 0 0 5px #43571F; margin-right: 8px; flex: 0 0 18px; }
+.workshop-copy .section-kicker::before, .closing-copy .section-kicker::before { box-shadow: inset 0 0 0 4px #43571F, inset 0 0 0 5px #F5CE74; border-color: rgba(245,206,116,.45); }
 .section-kicker span { font-family: 'DM Sans',sans-serif; color: #B76861; font-size: 10px; letter-spacing: .1em; }
 .story-section { background: #FBF7EF; }
 .story-grid { display: grid; grid-template-columns: 1fr .75fr; gap: 12vw; padding-left: 8vw; }
@@ -93,6 +94,9 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .story-body { color: #646956; max-width: 420px; padding-top: 25px; }
 .story-body p { margin: 0 0 20px; }
 .story-body strong { color: #43571F; }
+.golden-bridge { border-left: 1px solid rgba(67,87,31,.25); padding: 4px 0 5px 16px; margin: 28px 0; display: grid; grid-template-columns: 72px 1fr; gap: 6px 12px; }
+.golden-bridge span { color: #B76861; font-size: 8px; letter-spacing: .14em; font-weight: 700; padding-top: 2px; }
+.golden-bridge strong { font-family: 'DM Sans',sans-serif; color: #59604b; font-size: 11px; line-height: 1.4; font-weight: 500; }
 
 .workshop-section { display: grid; grid-template-columns: 1.05fr .95fr; background: #43571F; color: #F4EDDF; }
 .workshop-image { min-height: 730px; position: relative; margin: 0; overflow: hidden; background: #2f3f15; }
@@ -131,7 +135,15 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .feature-copy h3 { font-size: clamp(48px,5vw,75px); line-height: .86; color: #F4EDDF; max-width: 360px; margin: 15px 0 6px; }
 .feature-copy p { max-width: 270px; color: rgba(244,237,223,.75); }
 .feature-copy .feature-sub { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #F5CE74; margin: 0; }
+.feature-copy .feature-ritual { color: #F5CE74; font-family: 'Cormorant Garamond',serif; font-style: italic; font-size: 22px; line-height: 1; margin: 12px 0 4px; }
 .feature-index { font-size: 10px; letter-spacing: .15em; color: rgba(244,237,223,.65); }
+.price-grid { width: 100%; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; margin: 16px 0 8px; }
+.price-option { border: 1px solid rgba(244,237,223,.38); padding: 10px 10px 9px; display: flex; flex-direction: column; min-height: 91px; }
+.price-option.featured { border-color: #F5CE74; background: rgba(244,237,223,.09); }
+.price-option span { color: rgba(244,237,223,.75); font-size: 8px; letter-spacing: .12em; text-transform: uppercase; }
+.price-option strong { color: #F4EDDF; font-family: 'Cormorant Garamond',serif; font-size: 29px; line-height: 1; margin: 5px 0 auto; letter-spacing: -.03em; }
+.price-option small { color: #F5CE74; font-size: 8px; line-height: 1.2; }
+.price-caption { color: rgba(244,237,223,.58) !important; font-size: 8px; line-height: 1.35; max-width: 390px !important; margin: 0 0 12px !important; }
 .tone-rose { background: #B76861; } .tone-clay { background: #9A7049; } .tone-lavender { background: #6B6A7D; } .tone-apricot { background: #A97446; } .tone-blue { background: #5A7480; } .tone-night { background: #43526B; } .tone-sage { background: #687A54; }
 .product-legal-note { color: rgba(244,237,223,.78); font-size: 10px; margin: 5px 0 15px; }
 .feature-proof { display: flex; flex-direction: column; gap: 3px; margin: auto 0 18px; color: rgba(244,237,223,.7); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
@@ -143,6 +155,7 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .product-thumb img { display: block; width: 68px; height: 68px; object-fit: cover; background: #F4EDDF; mix-blend-mode: multiply; }
 .product-thumb span, .product-thumb small { display: block; margin-top: 9px; font-weight: 700; font-size: 11px; line-height: 1.05; }
 .product-thumb small { font-weight: 400; color: #7b7d6e; margin-top: 4px; }
+.product-thumb b { display: block; margin-top: 6px; color: #B76861; font-size: 9px; letter-spacing: .03em; }
 
 .trust-section { background: #FBF7EF; }
 .trust-card { background: #F5CE74; display: grid; grid-template-columns: 1fr .8fr; align-items: center; overflow: hidden; min-height: 410px; padding: 70px 7vw; }
@@ -163,12 +176,12 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 .floating-cta { position: fixed; right: 22px; bottom: 22px; z-index: 40; border: 0; border-radius: 99px; padding: 12px 17px; background: #E3A93C; color: #43571F; display: flex; align-items: center; gap: 9px; font-weight: 700; font-size: 11px; box-shadow: 0 13px 28px rgba(67,87,31,.17); cursor: pointer; transition: transform .18s var(--ease-out); }
 .floating-cta:hover { transform: translateY(-3px); }
 
-/* The rail is a progress marker: it gives visitors one clear answer to “where am I?” without becoming a second navigation system. */
-.tea-rail { position: fixed; z-index: 45; left: 12px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-start; gap: 18px; color: #5F7A2E; font-size: 8px; letter-spacing: .05em; padding: 12px 8px 12px 0; background: linear-gradient(90deg,rgba(244,237,223,.95),rgba(244,237,223,.55),transparent); border-radius: 0 30px 30px 0; }
-.rail-line { position: absolute; top: 23px; bottom: 23px; left: 19px; width: 2px; background: #43571F; opacity: .44; z-index: -1; }
-.rail-stop { width: 24px; min-height: 24px; border-radius: 50%; background: #F4EDDF; border: 1px solid rgba(67,87,31,.25); display: grid; place-items: center; color: #5F7A2E; padding: 0; cursor: pointer; transition: background .18s ease, color .18s ease, transform .18s var(--ease-out); position: relative; }
+/* The tea rail is the page spine: four workshop stops stay visible on wide screens and give every chapter one shared Deep Olive path. */
+.tea-rail { position: fixed; z-index: 45; left: 0; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-start; gap: 22px; color: #5F7A2E; font-size: 9px; letter-spacing: .05em; padding: 17px 19px 17px 9px; background: rgba(244,237,223,.94); border: 1px solid rgba(67,87,31,.15); border-left: 0; border-radius: 0 18px 18px 0; box-shadow: 8px 14px 30px rgba(67,87,31,.08); }
+.rail-line { position: absolute; top: 31px; bottom: 31px; left: 23px; width: 2px; background: #43571F; opacity: .7; z-index: -1; }
+.rail-stop { width: 29px; min-height: 29px; border-radius: 50%; background: #F4EDDF; border: 1px solid rgba(67,87,31,.35); display: grid; place-items: center; color: #5F7A2E; padding: 0; cursor: pointer; transition: background .18s ease, color .18s ease, transform .18s var(--ease-out); position: relative; font-size: 9px; font-weight: 700; }
 .rail-stop:hover { transform: scale(1.08); }
-.rail-stop small { position: absolute; left: 31px; min-width: max-content; font-size: 8px; font-weight: 700; letter-spacing: .08em; color: #43571F; pointer-events: none; transform: translateX(0); }
+.rail-stop small { position: absolute; left: 38px; min-width: max-content; font-size: 8px; font-weight: 700; letter-spacing: .11em; color: #43571F; pointer-events: none; transform: translateX(0); }
 .rail-stop.active { background: #43571F; color: #F5CE74; border-color: #43571F; }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -187,5 +200,5 @@ h1 em, h2 em { color: #B76861; font-style: italic; font-weight: 500; }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
 @media (max-width: 1120px) { .tea-rail { display: none; } .hero-copy { padding-left: 0; } }
-@media (max-width: 900px) { .site-header { padding: 0 22px; } .menu-trigger { display: block; } .header-nav { display: none; position: absolute; top: 78px; left: 0; right: 0; padding: 18px 22px 26px; background: #F4EDDF; border-bottom: 1px solid rgba(67,87,31,.12); flex-direction: column; align-items: flex-start; gap: 18px; } .header-nav.is-open { display: flex; } .hero-section, .workshop-section, .ritual-section, .closing-section { grid-template-columns: 1fr; } .hero-section { padding: 128px 7vw 30px; } .hero-art { min-height: 580px; margin-top: 14px; } .hero-scene, .hero-scene-wash { width: 90%; height: 580px; } .hero-scene { object-position: 54% 44%; } .hero-mascot-portrait { width: min(67%,500px); height: 107%; right: 9%; bottom: -9px; } .section-pad { padding: 90px 7vw; } .story-grid { padding-left: 0; grid-template-columns: 1fr; gap: 25px; } .workshop-image, .closing-art { min-height: 430px; } .workshop-copy, .closing-copy { padding: 80px 7vw; } .ritual-copy { padding-left: 0; } .collection-header { display: block; } .collection-header > p { margin-top: 25px; } .collection-feature { grid-template-columns: 1fr; } .feature-image { min-height: 360px; } .feature-copy { min-height: 390px; } .product-rail { grid-template-columns: repeat(4,1fr); } .trust-card { grid-template-columns: 1fr; padding: 55px 8vw 15px; } .trust-card img { max-height: 260px; margin-top: 20px; } .site-footer { align-items: flex-start; flex-direction: column; gap: 17px; } }
-@media (max-width: 520px) { h1 { font-size: 61px; } .hero-section { padding-top: 114px; } .hero-art { min-height: 470px; margin-top: 4px; } .hero-scene, .hero-scene-wash { width: 100%; height: 470px; border-radius: 42% 42% 1rem 1rem; } .hero-scene { object-position: 57% 42%; } .hero-mascot-portrait { width: 91%; height: 108%; right: -7%; bottom: -11px; object-position: 53% 100%; } .hero-art > .mascot-note { top: 4%; left: -2%; transform: scale(.84); transform-origin: left top; } .hero-stamp { width: 70px; height: 70px; font-size: 8px; top: 17%; right: 3%; } .hero-caption { bottom: 18px; left: 6%; right: 6%; font-size: 7px; letter-spacing: .04em; } .hero-caption span:last-child { max-width: 172px; text-align: right; } .hero-note { margin-top: 32px; } .story-title h2, .workshop-copy h2, .ritual-copy h2, .collection-header h2, .trust-card h2, .closing-copy h2 { font-size: 54px; } .mascot-note-image { width: 50px; height: 50px; flex-basis: 50px; } .product-rail { grid-template-columns: repeat(2,1fr); gap: 20px 10px; } .vertical-label { display: none; } .floating-cta { right: 14px; bottom: 14px; } }
+@media (max-width: 900px) { .site-header { padding: 0 22px; } .menu-trigger { display: block; } .header-nav { display: none; position: absolute; top: 78px; left: 0; right: 0; padding: 18px 22px 26px; background: #F4EDDF; border-bottom: 1px solid rgba(67,87,31,.12); flex-direction: column; align-items: flex-start; gap: 18px; } .header-nav.is-open { display: flex; } .hero-section, .workshop-section, .ritual-section, .closing-section { grid-template-columns: 1fr; } .hero-section { padding: 128px 7vw 30px; } .hero-art { min-height: 580px; margin-top: 14px; } .hero-art::before { width: 89%; height: 94%; right: 1%; } .hero-mascot-portrait { width: 88%; height: 580px; right: 5%; top: 0; object-position: 50% 42%; } .section-pad { padding: 90px 7vw; } .story-grid { padding-left: 0; grid-template-columns: 1fr; gap: 25px; } .workshop-image, .closing-art { min-height: 430px; } .workshop-copy, .closing-copy { padding: 80px 7vw; } .ritual-copy { padding-left: 0; } .collection-header { display: block; } .collection-header > p { margin-top: 25px; } .collection-feature { grid-template-columns: 1fr; } .feature-image { min-height: 360px; } .feature-copy { min-height: 490px; } .product-rail { grid-template-columns: repeat(4,1fr); } .trust-card { grid-template-columns: 1fr; padding: 55px 8vw 15px; } .trust-card img { max-height: 260px; margin-top: 20px; } .site-footer { align-items: flex-start; flex-direction: column; gap: 17px; } }
+@media (max-width: 520px) { h1 { font-size: 61px; } .hero-section { padding-top: 114px; } .hero-art { min-height: 470px; margin-top: 4px; } .hero-art::before { width: 100%; height: 95%; right: 0; border-radius: 42% 42% 1rem 1rem; } .hero-mascot-portrait { width: 100%; height: 470px; right: 0; top: 0; border-radius: 42% 42% 1rem 1rem; object-position: 52% 42%; } .hero-art > .mascot-note { top: 4%; left: -2%; transform: scale(.84); transform-origin: left top; } .hero-stamp { width: 70px; height: 70px; font-size: 8px; top: 17%; right: 3%; } .hero-caption { bottom: 18px; left: 6%; right: 6%; font-size: 7px; letter-spacing: .04em; } .hero-caption span:last-child { max-width: 172px; text-align: right; } .hero-note { margin-top: 32px; } .story-title h2, .workshop-copy h2, .ritual-copy h2, .collection-header h2, .trust-card h2, .closing-copy h2 { font-size: 54px; } .mascot-note-image { width: 50px; height: 50px; flex-basis: 50px; } .product-rail { grid-template-columns: repeat(2,1fr); gap: 20px 10px; } .vertical-label { display: none; } .floating-cta { right: 14px; bottom: 14px; } }

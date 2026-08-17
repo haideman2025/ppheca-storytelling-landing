@@ -15,27 +15,34 @@ const storage = {
   shelf: "/manus-storage/ppheca_cover_final_07_an_giac_7_vi_9865e51f.png",
 };
 
+const shopUrl = "https://vt.tiktok.com/ZS9kmsHgCRh1o-fN0Px/";
+
+const purchaseOptions = [
+  { bags: "Túi 05 gói", price: "54.400đ", promotion: "CTKM: mua 1 tặng 5" },
+  { bags: "Túi 15 gói", price: "159.200đ", promotion: "Tặng thêm 5 gói" },
+];
+
 const products = [
-  { name: "Trà Mộc Nhan", sub: "Đông Trùng · 7 vị", mood: "Nếu bạn muốn buổi chiều mềm lại một chút, tôi mời bạn bắt đầu từ hộp này.", image: "/manus-storage/ppheca_cover_final_01_moc_nhan_dong_trung_7_vi_fa8bbc28.png", tone: "rose" },
-  { name: "Trà Dưỡng Cốt", sub: "7 vị thảo mộc", mood: "Tôi để vị này cho những ngày bạn muốn giữ một nếp chăm sóc thật đều.", image: "/manus-storage/ppheca_cover_final_02_duong_cot_7_vi_158b95b0.png", tone: "clay", note: "Sản phẩm không phải là thuốc." },
-  { name: "Trà An Giấc", sub: "7 vị · Lạc Tiên", mood: "Cuối ngày rồi, mình pha một cốc ấm và cất bớt những ồn ào nhé.", image: "/manus-storage/ppheca_cover_final_07_an_giac_7_vi_9865e51f.png", tone: "lavender", note: "Sản phẩm không phải là thuốc." },
-  { name: "Trà HaMoKhang", sub: "7 vị phối hợp", mood: "Hộp này dành cho lúc bạn chỉ cần một vị trà dễ mến, dễ pha, dễ nhớ.", image: "/manus-storage/ppheca_cover_refresh_04_hamokhang_c831093d.png", tone: "apricot" },
-  { name: "Trà Thanh Can", sub: "Đông Trùng · 7 vị", mood: "Tôi giữ sẵn cho những ngày lịch kín, khi một phút chậm cũng đã rất quý.", image: "/manus-storage/ppheca_cover_refresh_05_thanh_can_62d2a3c5.png", tone: "blue" },
-  { name: "HealthTeaRest", sub: "Lạc Tiên Sâm Nam", mood: "Nếu hôm nay có nhiều điều chưa nói, mình cứ ngồi yên với một cốc trà trước đã.", image: "/manus-storage/ppheca_cover_final_06_lac_tien_sam_nam_86ca2847.png", tone: "night" },
-  { name: "HEALTHTEALIV", sub: "Canh Châu · trà túi lọc", mood: "Tôi mời bạn bắt đầu bằng điều đơn giản nhất: biết rõ điều gì đang ở trong cốc trà.", image: "/manus-storage/ppheca_cover_refresh_03_canh_chau_6de19000.png", tone: "sage" },
+  { name: "Trà Mộc Nhan", sub: "Đông Trùng · 7 vị", ritual: "Khoảng chiều mềm lại", mood: "Một vị trà thơm cho buổi chiều bạn muốn ngồi chậm lại một chút.", image: "/manus-storage/ppheca_cover_final_01_moc_nhan_dong_trung_7_vi_fa8bbc28.png", tone: "rose" },
+  { name: "Trà Dưỡng Cốt", sub: "7 vị thảo mộc", ritual: "Nếp chăm đều đặn", mood: "Tôi để vị này cho những ngày bạn muốn giữ một nếp chăm sóc thật đều.", image: "/manus-storage/ppheca_cover_final_02_duong_cot_7_vi_158b95b0.png", tone: "clay", note: "Sản phẩm không phải là thuốc." },
+  { name: "Trà An Giấc", sub: "7 vị · Lạc Tiên", ritual: "Lời chào cuối ngày", mood: "Cuối ngày rồi, mình pha một cốc ấm và cất bớt những ồn ào nhé.", image: "/manus-storage/ppheca_cover_final_07_an_giac_7_vi_9865e51f.png", tone: "lavender", note: "Sản phẩm không phải là thuốc." },
+  { name: "Trà HaMoKhang", sub: "7 vị phối hợp", ritual: "Một cốc dễ mến", mood: "Một hộp trà dễ pha, dễ nhớ cho những nhịp sinh hoạt thường ngày.", image: "/manus-storage/ppheca_cover_refresh_04_hamokhang_c831093d.png", tone: "apricot" },
+  { name: "Trà Thanh Can", sub: "Đông Trùng · 7 vị", ritual: "Một nhịp chậm giữa lịch kín", mood: "Tôi giữ sẵn cho những ngày lịch kín, khi một phút chậm cũng đã rất quý.", image: "/manus-storage/ppheca_cover_refresh_05_thanh_can_62d2a3c5.png", tone: "blue" },
+  { name: "Trà Lạc Tiên Sâm Nam", sub: "Lạc Tiên · Sâm Nam", ritual: "Ngồi yên rồi kể nhau nghe", mood: "Nếu hôm nay có nhiều điều chưa nói, mình cứ ngồi yên với một cốc trà trước đã.", image: "/manus-storage/ppheca_cover_final_06_lac_tien_sam_nam_86ca2847.png", tone: "night" },
+  { name: "Trà Canh Châu", sub: "Trà túi lọc · 7 vị", ritual: "Biết rõ điều trong cốc", mood: "Bắt đầu bằng điều đơn giản nhất: biết rõ điều gì đang ở trong cốc trà của mình.", image: "/manus-storage/ppheca_cover_refresh_03_canh_chau_6de19000.png", tone: "sage" },
 ];
 
 const steps = [
-  { no: "01", label: "Nhìn kỹ", text: "Tôi muốn bạn nhìn thấy từng vị trước khi chúng đi vào túi trà." },
-  { no: "02", label: "Đặt cạnh nhau", text: "Tôi thử để chúng đi cùng nhau, sao cho mỗi ngụm trà dễ bước vào ngày của bạn." },
-  { no: "03", label: "Mời bạn dùng", text: "Rồi mình pha một túi trà, ngồi xuống, và không cần vội vàng thêm gì nữa." },
+  { no: "01", label: "Chọn từng vị", text: "Tôi nhìn mùi, sắc và độ quen thuộc của từng nguyên liệu trước khi đưa vào một công thức." },
+  { no: "02", label: "Cân lại cho vừa", text: "Bảy vị được đặt cạnh nhau để cốc trà thơm, êm và dễ pha trong nhịp sống hằng ngày." },
+  { no: "03", label: "Đóng vào túi", text: "Rồi tôi gói lại để khi cần một khoảng nghỉ, bạn chỉ việc đun nước và ngồi xuống." },
 ];
 
 const chapters = [
-  { id: "top", number: "01", label: "Gặp Thảo" },
-  { id: "workshop", number: "02", label: "Nhìn từng vị" },
-  { id: "ritual", number: "03", label: "Pha cùng Thảo" },
-  { id: "collection", number: "04", label: "Chọn hộp trà" },
+  { id: "story", number: "01", label: "Vì sao" },
+  { id: "workshop", number: "02", label: "7 vị & phối" },
+  { id: "ritual", number: "03", label: "Khoảnh khắc" },
+  { id: "collection", number: "04", label: "Chọn hộp" },
 ];
 
 function TeaMark() {
@@ -54,7 +61,7 @@ function MascotNote({ image, title, detail, dark = false }: { image: string; tit
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProduct, setActiveProduct] = useState(0);
-  const [activeChapter, setActiveChapter] = useState("top");
+  const [activeChapter, setActiveChapter] = useState("story");
   const active = useMemo(() => products[activeProduct], [activeProduct]);
 
   useEffect(() => {
@@ -124,8 +131,6 @@ export default function Home() {
           <div className="hero-note"><span className="note-dot" /> Ở đây, bạn không cần chọn thật nhanh.</div>
         </div>
         <div className="hero-art" aria-label="Miss PPHeCa chào bạn ở Xưởng Thảo Mộc" data-reveal>
-          <img className="hero-scene" src={storage.scene} alt="Không gian Xưởng Thảo Mộc PPHeCa" fetchPriority="high" />
-          <span className="hero-scene-wash" />
           <img className="hero-mascot-portrait" src={storage.mascot} alt="Miss PPHeCa, mascot chính thức của thương hiệu" fetchPriority="high" />
           <MascotNote image={storage.chibiWelcome} title="Tôi mở cửa xưởng" detail="mời bạn vào xem" />
           <div className="hero-orbit orbit-one" />
@@ -136,10 +141,10 @@ export default function Home() {
       </section>
 
       <section id="story" className="story-section section-pad">
-        <div className="section-kicker">THẢO KỂ BẠN NGHE <span>01</span></div>
+        <div className="section-kicker">VÌ SAO TÔI MỞ XƯỞNG NÀY <span>01 · WHY</span></div>
         <div className="story-grid" data-reveal>
-          <div className="story-title"><h2>Có những ngày mình chỉ cần được nhắc:</h2><span className="scribble">nghỉ một chút thôi.</span></div>
-          <div className="story-body"><p>Tôi hay nghĩ, quan tâm đâu nhất thiết phải nói thật to. Có khi chỉ là rót cho mẹ một cốc nước ấm. Có khi là nhắn người bạn đang mệt rằng: “Về nhà pha trà đi, rồi kể mình nghe.”</p><p>Vì thế tôi gọi nơi này là <strong>Xưởng Thảo Mộc</strong>. Ở đây, tôi kể bạn nghe từng vị đang có trong hộp trà, để bạn chọn theo nhịp sống của mình — chứ không phải theo một lời hứa vội vàng.</p><button className="text-link olive" onClick={() => scrollTo("workshop")}>Đi một vòng cùng tôi <ArrowRight size={15} /></button></div>
+          <div className="story-title"><h2>Tôi tin ai cũng cần một chỗ để</h2><span className="scribble">thở chậm lại.</span></div>
+          <div className="story-body"><MascotNote image={storage.chibiWelcome} title="Tôi kể bạn nghe" detail="vì sao tôi mở xưởng" /><p>Tôi mở PPHeCa không phải để bạn phải sống khác đi chỉ sau một cốc trà. Tôi mở xưởng này vì giữa những ngày bận rộn, ai cũng xứng đáng có một tín hiệu nhỏ rằng: “Mình cũng cần được chăm.”</p><p>Có thể là rót nước cho mẹ. Có thể là nhắn một người bạn: “Về nhà pha trà đi, rồi kể mình nghe.” Với tôi, đó là cách quan tâm không cần nói thật to.</p><div className="golden-bridge"><span>VÌ SAO</span><strong>Một khoảng nghỉ ấm áp cho những ngày thật.</strong><span>THẾ NÀO</span><strong>Nhìn kỹ, phối vừa và gói sẵn bảy vị thảo mộc.</strong><span>ĐIỀU GÌ</span><strong>Những hộp trà để bạn chọn theo nhịp sống của mình.</strong></div><button className="text-link olive" onClick={() => scrollTo("workshop")}>Đi vào xưởng cùng tôi <ArrowRight size={15} /></button></div>
         </div>
       </section>
 
@@ -150,10 +155,10 @@ export default function Home() {
         </figure>
         <div className="workshop-copy" data-reveal>
           <MascotNote image={storage.chibiWorkshop} title="Tôi hay nói" detail="nhìn thấy mới tin" dark />
-          <div className="section-kicker">TRONG XƯỞNG CỦA TÔI <span>02</span></div>
-          <h2>Trước khi vào hộp trà, tôi muốn bạn gặp bảy người bạn của tôi.</h2>
-          <p>Mỗi bạn mang một màu, một mùi, một câu chuyện riêng. Tôi để họ đi cạnh nhau, không phải để làm mọi thứ phức tạp hơn, mà để cốc trà của bạn có thêm một điều đáng nhớ.</p>
-          <p>Bạn cứ xem kỹ nhé. Tên của từng thành phần đều ở đây. Còn chọn vị nào, tôi để bạn chọn theo điều mình đang cần trong một ngày rất bình thường.</p>
+          <div className="section-kicker">TÔI LÀM THẾ NÀO <span>02 · HOW</span></div>
+          <h2>Tôi bắt đầu từ bảy vị, rồi mới nghĩ đến một cốc trà.</h2>
+          <p>Trong xưởng, tôi không gọi đây là những “thành phần thần kỳ”. Tôi gọi đó là bảy người bạn: mỗi vị có mùi, sắc và cá tính riêng; cùng đi vào một công thức để cốc trà thơm, cân bằng và dễ uống.</p>
+          <p>Tôi nhìn từng vị trước, đặt chúng cạnh nhau sau. Khi mùi hương đủ dịu và cảm giác uống đủ gần gũi cho một ngày bình thường, tôi mới gói chúng vào túi trà. Đó là cách PPHeCa biến một khoảng nghỉ nhỏ thành nếp chăm sóc bản thân dễ duy trì.</p>
           <div className="step-list">{steps.map((step) => <div className="step-item" key={step.no}><span className="step-no">{step.no}</span><div><strong>{step.label}</strong><p>{step.text}</p></div></div>)}</div>
         </div>
       </section>
@@ -161,9 +166,9 @@ export default function Home() {
       <section id="ritual" className="ritual-section section-pad">
         <div className="ritual-copy" data-reveal>
           <MascotNote image={storage.chibiRitual} title="Tôi nhắc khẽ" detail="pha chậm một chút" />
-          <div className="section-kicker">MỘT LÚC CHO MÌNH <span>03</span></div>
+          <div className="section-kicker">CÁCH TÔI MỜI BẠN UỐNG <span>03</span></div>
           <h2>Tôi không bắt bạn có thêm thời gian. Chỉ giữ lại ba phút thôi.</h2>
-          <p>Đặt điện thoại xuống một lát. Cho túi trà vào cốc. Đợi nước nóng ôm lấy mùi thơm. Vậy là mình đã có một khoảng nghỉ rồi — chẳng cần làm nó thật cầu kỳ.</p>
+          <p>Đặt điện thoại xuống một lát. Cho túi trà vào cốc. Đợi nước nóng ôm lấy mùi thơm. Vậy là một thói quen nhỏ đã bắt đầu — chẳng cần làm nó thật cầu kỳ, cũng không cần chờ đến khi mọi thứ đã xong xuôi.</p>
           <div className="pull-quote">“Mình ngửi trước một chút nhé. Rồi hãy uống.”</div>
           <div className="annotation"><span>Thảo ghi chú</span> — hôm nay, bạn bắt đầu từ điều nhỏ nào cũng được.</div>
         </div>
@@ -177,20 +182,20 @@ export default function Home() {
         <div className="collection-header" data-reveal>
           <div>
             <MascotNote image={storage.chibiCollection} title="Tôi để sẵn" detail="bảy hộp trà ở đây" />
-            <div className="section-kicker">ĐẾN LƯỢT BẠN CHỌN <span>04</span></div>
+            <div className="section-kicker">ĐÂY LÀ HỘP TRÀ <span>04 · WHAT</span></div>
             <h2>Hôm nay, bạn muốn<br /><em>tôi pha vị nào?</em></h2>
           </div>
-          <p>Tôi để ảnh thật của từng hộp bên dưới. Bạn không cần biết hết mọi thứ về trà — chỉ cần chọn một vị khiến hôm nay của mình dễ chịu hơn một chút.</p>
+          <p>Đây là ảnh thật của từng hộp tôi để trong xưởng. Bạn chọn vị trước, rồi chọn quy cách 05 hoặc 15 gói; phần còn lại là để một cốc nước nóng làm giúp mình.</p>
         </div>
         <div className="collection-feature" data-reveal>
           <div className="feature-image"><img src={active.image} alt={active.name} loading="lazy" /></div>
-          <div className={`feature-copy tone-${active.tone}`}><span className="feature-index">HỘP TRÀ THỨ 0{activeProduct + 1}</span><h3>{active.name}</h3><p className="feature-sub">{active.sub}</p><p>{active.mood}</p>{active.note && <small className="product-legal-note">{active.note}</small>}<div className="feature-proof"><span><i /> ẢNH HỘP TRÀ THẬT</span><span>tôi để đúng theo bao bì</span></div><button className="button button-cream" onClick={() => scrollTo("collection")}>Xem hộp trà này <ArrowRight size={16} /></button></div>
+          <div className={`feature-copy tone-${active.tone}`}><span className="feature-index">NGHI THỨC 0{activeProduct + 1}</span><h3>{active.name}</h3><p className="feature-sub">{active.sub}</p><p className="feature-ritual">{active.ritual}</p><p>{active.mood}</p>{active.note && <small className="product-legal-note">{active.note}</small>}<div className="price-grid" aria-label="Quy cách và giá bán"><div className="price-option"><span>05 gói</span><strong>54.400đ</strong><small>CTKM: mua 1 tặng 5</small></div><div className="price-option featured"><span>15 gói</span><strong>159.200đ</strong><small>Tặng thêm 5 gói</small></div></div><p className="price-caption">Giá và ưu đãi theo thông tin PPHeCa cung cấp; kiểm tra lại tại gian hàng trước khi thanh toán.</p><div className="feature-proof"><span><i /> ẢNH HỘP TRÀ THẬT</span><span>tôi để đúng theo bao bì</span></div><a className="button button-cream" href={shopUrl} target="_blank" rel="noreferrer">Chọn quy cách này <ArrowRight size={16} /></a></div>
         </div>
-        <div className="product-rail" data-reveal>{products.map((product, index) => <button key={product.name} className={index === activeProduct ? "product-thumb is-active" : "product-thumb"} onClick={() => setActiveProduct(index)}><img src={product.image} alt="" loading="lazy" /><span>{product.name}</span><small>{product.sub}</small></button>)}</div>
+        <div className="product-rail" data-reveal>{products.map((product, index) => <button key={product.name} className={index === activeProduct ? "product-thumb is-active" : "product-thumb"} onClick={() => setActiveProduct(index)}><img src={product.image} alt="" loading="lazy" /><span>{product.name}</span><small>{product.ritual}</small><b>Từ 54.400đ</b></button>)}</div>
       </section>
 
       <section className="trust-section section-pad">
-        <div className="trust-card" data-reveal><div><div className="section-kicker">NẾU BẠN MUỐN GỬI AI ĐÓ <span>05</span></div><h2>Tôi gói giúp bạn<br /><em>một lời hỏi thăm.</em></h2><p>Có những dịp chẳng biết nói gì cho vừa. Vậy thì gửi một hộp trà cũng được. Người nhận có thể pha lúc nào họ cần, và biết rằng bạn vẫn đang nghĩ đến họ.</p><button className="button button-primary" onClick={() => scrollTo("collection")}>Xem bộ trà tôi gói <ArrowRight size={17} /></button></div><img src={storage.combo} alt="Visual combo sản phẩm PPHeCa" loading="lazy" /></div>
+        <div className="trust-card" data-reveal><div><div className="section-kicker">NẾU BẠN MUỐN GỬI AI ĐÓ <span>05</span></div><h2>Tôi gói giúp bạn<br /><em>một lời hỏi thăm.</em></h2><p>Có những dịp chẳng biết nói gì cho vừa. Vậy thì gửi một hộp trà cũng được. Người nhận có thể pha lúc nào họ cần, và biết rằng bạn vẫn đang nghĩ đến họ.</p><a className="button button-primary" href={shopUrl} target="_blank" rel="noreferrer">Xem bộ trà tôi gói <ArrowRight size={17} /></a></div><img src={storage.combo} alt="Visual combo sản phẩm PPHeCa" loading="lazy" /></div>
       </section>
 
       <section className="closing-section">

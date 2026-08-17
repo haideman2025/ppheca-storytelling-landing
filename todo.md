@@ -11,3 +11,13 @@
 - [x] Viết lại nội dung landing theo lời kể tự nhiên, gần gũi của Thảo.
 - [x] Tinh chỉnh crop, vị trí và tỷ lệ visual hero cho desktop và mobile.
 - [x] Kiểm tra lại nhịp kể chuyện, khả năng đọc và responsive trước khi bàn giao.
+- [x] Đối chiếu giá bán chính thức theo thông tin người dùng xác nhận.
+- [x] Thay hero hai lớp bằng một composition duy nhất, không chồng ảnh.
+- [x] Hiển thị giá minh bạch tại card sản phẩm, rail sản phẩm và CTA liên quan.
+- [x] Kiểm tra desktop/mobile sau hiệu chỉnh hero và giá.
+- [x] Chuẩn hóa gói 5 và 15 gói cùng điều kiện quà tặng/khuyến mại do người dùng xác nhận.
+- [x] Tái cấu trúc nội dung theo Golden Circle: Why, How, rồi mới đến What.
+- [x] Viết lại hành trình phối 7 vị theo lợi ích trải nghiệm, không dùng claim sức khỏe/điều trị chưa xác minh.
+- [x] Tích hợp giá, ưu đãi và CTA chọn quy cách vào bộ sưu tập sản phẩm.
+- [x] Kiểm tra hiển thị Golden Circle, giá và CTA ở desktop/mobile.
+- [ ] Lưu checkpoint và bàn giao bản Golden Circle.
