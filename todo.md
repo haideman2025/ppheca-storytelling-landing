@@ -43,3 +43,6 @@
 - [x] Loại bỏ phụ thuộc render Markdown nặng trong chat, vẫn giữ liên kết TikTok Shop có thể bấm và xác nhận build production.
 - [x] Thay mọi nội dung thành phần mang tính placeholder bằng mô tả chỉ dùng dữ liệu nhãn và catalog đã xác minh.
 - [x] Lập biên bản bàn giao cuối, đối chiếu các checkpoint v1–v6 và mô tả chính xác bản nâng cấp trợ lý Thảo hiện tại.
+- [x] Xác nhận các file mã landing PPHeCa, MascotChat, router tRPC và styles đang là bản triển khai thực tế, không phải template ví dụ.
+- [x] Sửa dứt điểm phụ thuộc runtime `dotenv`, sau đó lưu bằng chứng build production thành công.
+- [x] Chụp lại desktop/mobile trên phiên bản trợ lý đã xác minh rồi mới chốt kiểm thử và bàn giao.
