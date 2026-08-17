@@ -1,0 +1,10 @@
+- [x] Xác định mascot Thảo, visual combo và storyboard infographic cho landing page.
+- [x] Bàn giao prompt GPT Image 2 và danh sách ảnh tham chiếu cần dùng.
+- [x] Xác định nhân vật mascot gốc trên bao bì và viết lại prompt theo nguồn tham chiếu đó.
+- [ ] Bàn giao prompt tạo lại mascot theo ảnh crop nhãn Mộc Nhan do người dùng cung cấp.
+- [ ] Chấm điểm các phương án mascot và chốt một nhân vật chuẩn theo bao bì thật.
+- [x] Nhận bộ visual GPT Image 2 gồm mascot, combo và infographic storytelling.
+- [x] Tải visual mới lên kho asset và map vào các section landing page.
+- [x] Nâng cấp motion, mobile UX và hiệu năng tải ảnh.
+- [x] Kiểm tra build cùng bố cục desktop/mobile bằng screenshot.
+- [ ] Lưu checkpoint và bàn giao bản nâng cấp.
